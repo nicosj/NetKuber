@@ -1,3 +1,45 @@
 
 D
 Data/AppDbContext.cs,0\5\059bfc2768101f83614e7d19a9d55ea40400ce21
+G
+Token/IUsuarioSesion.cs,1\8\18923632b4b645fc156f1307a89ddf1ed2b1e0bb
+F
+Token/UsuarioSesion.cs,2\b\2bfc4624405a33331d0c93f5cfedac2e4c7d37c2
+B
+Models/Inmueble.cs,7\e\7e4a72add91b91976d086110b5083f48750a44df
+A
+Models/Usuario.cs,e\7\e791d5ea64093bde78a3270eacbf66b21160a112
+N
+Properties/launchSettings.json,9\8\984cefae6e43933708b57b6d4f368dd62b3283ef
+D
+Data/LoadDatabase.cs,1\1\11b8777ceaf82fdf669af533f93de6594a54c1a2
+V
+&Dtos/UsuarioDtos/UsuarioResponseDto.cs,4\5\45d09e09023202f8f9c9a84e71fe6947fb5a2090
+Z
+*Dtos/UsuarioDtos/UsuarioLoginRequestDto.cs,1\c\1c06c74aefac7b8e1823dcb2c2f9b59f9cd36374
+]
+-Dtos/UsuarioDtos/UsuarioRegistroRequestDto.cs,2\4\2472ebe443f59e8ce44218922820245490a96d2b
+F
+Token/IJwtGenerador.cs,f\4\f43a3dbe3e495217e1ca027732a94080e146375a
+Q
+!Middleware/MiddlewareException.cs,9\4\942318e69de088ebf0353a3cdbad2f9fa51fa4bd
+O
+Middleware/ManagerMiddleware.cs,4\9\495ed045c7453ce56cf5e7cce5014dfe4adcac8a
+X
+(Dtos/InmuebleDtos/InmuebleResponseDto.cs,2\f\2f1dcbbce1d6cb924086fabf2b31d30d574d43c0
+W
+'Dtos/InmuebleDtos/InmuebleRequestDto.cs,4\8\48d5493199dd08fbf872e11cc8c18e7116345cdb
+S
+#Data/Usuarios/IUsuarioRepository.cs,9\7\972a807184186425e5261290bc0fa630868b448b
+R
+"Data/Usuarios/UsuarioRepository.cs,e\8\e84baeea3e625c610f2d427bb75764e36a5fe75a
+P
+ Controllers/UsuarioController.cs,1\2\129a9aa1ecf7b772d86fdcf998e6668e33ca45bb
+K
+Profiles/InmuebleProfile.cs,4\3\43f1cd2d1a1f5cc1b05c2ad2db5b29a3c6fdf778
+U
+%Data/Inmuebles/IInmuebleRepository.cs,3\2\3238a65424a0d3a66eb7e022927549d09a5715cd
+T
+$Data/Inmuebles/InmuebleRepository.cs,d\3\d38555159e9b7a5aa386ecd525ad3866069b2dc4
+Q
+!Controllers/InmuebleController.cs,5\3\53e16f9fce224db7aeb5984008b9f9a7fc866f26
