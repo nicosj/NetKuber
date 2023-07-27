@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Identity;
-namespace NetKuber.Data;
+using NetKuber.Data;
 namespace NetKuber.Models;
 
 
@@ -11,15 +11,13 @@ public class LoadDatabase
         {
             var usuario = new Usuario
             {
-                Nommbre= "Admin",
+                Nombre= "Admin",
                 Apellido = "Admin",
                 email="admin@admin.com",
                 UserName="nicosj",
                 Telefono="123456789",
             };
-            await usuarioManager.CreateAsync(usuario, "Abc123456789@").Wait();
-            
-
+            await usuarioManager.CreateAsync(usuario, "Abc123456789@");
         }
 
         if (!context.Inmuebles!.Any())
@@ -38,9 +36,7 @@ public class LoadDatabase
                     Direccion = "Calle 456",
                     Precio = 3500M,
                     FechaCreacion = DateTime.Now,
-                },
-
-
+                }
             );
         }
         context.SaveChanges();

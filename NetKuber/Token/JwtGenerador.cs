@@ -1,12 +1,14 @@
 using NetKuber.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text;
 using Microsoft.IdentityModel.Tokens;
+
 namespace NetKuber.Token;
 
 public class JwtGenerador : IJwtGenerador
 {
-    public CrearToken(Usuario usuario)
+    public string CrearToken(Usuario usuario)
     {
         var claims = new List<Claim>
         {
@@ -34,6 +36,7 @@ public class JwtGenerador : IJwtGenerador
 
         return tokenHandler.WriteToken(token);
     }
+    
 }
 
 

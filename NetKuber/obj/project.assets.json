@@ -4183,25 +4183,36 @@
     ]
   },
   "packageFolders": {
-    "/home/nicosj/.nuget/packages/": {}
+    "C:\\Users\\Pia\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nicosj/proyectos4/loco/NetKuber/NetKuber.csproj",
+      "projectUniqueName": "C:\\Users\\Pia\\RiderProjects\\NetKube\\NetKuber\\NetKuber.csproj",
       "projectName": "NetKuber",
-      "projectPath": "/home/nicosj/proyectos4/loco/NetKuber/NetKuber.csproj",
-      "packagesPath": "/home/nicosj/.nuget/packages/",
-      "outputPath": "/home/nicosj/proyectos4/loco/NetKuber/obj/",
+      "projectPath": "C:\\Users\\Pia\\RiderProjects\\NetKube\\NetKuber\\NetKuber.csproj",
+      "packagesPath": "C:\\Users\\Pia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Pia\\RiderProjects\\NetKube\\NetKuber\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "/home/nicosj/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Pia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "/usr/share/dotnet/sdk/7.0.306/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.4.23260.5\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4274,6 +4285,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.5, 7.0.5]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[7.0.5, 7.0.5]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.5, 7.0.5]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.5, 7.0.5]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -4282,7 +4311,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.4.23260.5\\RuntimeIdentifierGraph.json"
       }
     }
   }
