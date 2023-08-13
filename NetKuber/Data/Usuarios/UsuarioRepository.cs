@@ -34,7 +34,7 @@ public class UsuarioRepository: IUsuarioRepository
     
     public async Task<UsuarioResponseDto> GetUsuario()
     {
-      var usuario = await _userManager.FindByIdAsync(_usuarioSesion.ObtenerUsuarioSesion());
+      var usuario = await _userManager.Users.FirstOrDefaultAsync(x=>x.UserName==_usuarioSesion.ObtenerUsuarioSesion());
       if (usuario is null)
       {
           throw new MiddlewareException(HttpStatusCode.Unauthorized,new {mensaje="El usuario del token no existe en la base de datos"});
@@ -59,7 +59,7 @@ public class UsuarioRepository: IUsuarioRepository
 
     public async Task<UsuarioResponseDto> Login(UsuarioLoginRequestDto request)
     {
-        var usuariod = await _userManager.FindByEmailAsync(request.Email!);
+        var usuariod = await  _userManager.Users.FirstOrDefaultAsync(x => x.Email ==request.Email);
         if (usuariod is null)
         {
             throw new MiddlewareException(HttpStatusCode.Unauthorized,new {mensaje="El usuario no existe en la base de datos"});
@@ -80,6 +80,7 @@ public class UsuarioRepository: IUsuarioRepository
         {
             throw new MiddlewareException(HttpStatusCode.BadRequest,new {mensaje="El email o username ya existe en la base de datos"});
         }
+        Console.WriteLine(request.Nombre+"<-asdasd->"+request.Password);
         var usuario = new Usuario
         {
             Nombre = request.Nombre,
@@ -88,7 +89,8 @@ public class UsuarioRepository: IUsuarioRepository
             UserName = request.UserName,
             Telefono = request.Telefono
         };
-        var resul=await _userManager.CreateAsync(usuario, request.Password!);
+        var resul=await _userManager.CreateAsync(usuario);
+        Console.WriteLine(resul);
         if (resul.Succeeded)
         {
             return TransformerUserToUserDto(usuario);    

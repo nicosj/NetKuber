@@ -18,7 +18,8 @@ using NetKuber.Token;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(x=>
 {
-    x.LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, LogLevel.Information).EnableSensitiveDataLogging();
+    x.LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name }, 
+        LogLevel.Information).EnableSensitiveDataLogging();
     x.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")!);
 });
 builder.Services.AddScoped<IInmuebleRepository, InmuebleRepository>();
@@ -32,23 +33,28 @@ builder.Services.AddControllers(x =>
     x.Filters.Add(new AuthorizeFilter(policy));
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var mapperConfig = new MapperConfiguration(mc =>
 {
     mc.AddProfile(new InmuebleProfile());
 });
+
 IMapper mapper = mapperConfig.CreateMapper();
 builder.Services.AddSingleton(mapper);
 var builderSecurity = builder.Services.AddIdentityCore<Usuario>();
+
 var identityBuilder = new IdentityBuilder(builderSecurity.UserType, builder.Services);
+
 identityBuilder.AddEntityFrameworkStores<AppDbContext>();
 identityBuilder.AddSignInManager<SignInManager<Usuario>>();
 builder.Services.AddSingleton<ISystemClock, SystemClock>();
 builder.Services.AddScoped<IJwtGenerador, JwtGenerador>();
 builder.Services.AddScoped<IUsuarioSesion, UsuarioSesion>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Mi palabra secreta"));
+
+var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Mi palabra secreta Maria Pia Nicolas Belen Pepito Hongito 19892014"));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(x =>
 {
     x.TokenValidationParameters = new TokenValidationParameters

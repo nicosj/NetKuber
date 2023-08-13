@@ -13,7 +13,7 @@ public class LoadDatabase
             {
                 Nombre= "Admin",
                 Apellido = "Admin",
-                email="admin@admin.com",
+                Email="admin@admin.com",
                 UserName="nicosj",
                 Telefono="123456789",
             };
@@ -39,7 +39,7 @@ public class LoadDatabase
                 }
             );
         }
-        context.SaveChanges();
+        await context.SaveChangesAsync();
     }
 }
 

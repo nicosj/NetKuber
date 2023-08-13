@@ -7,8 +7,6 @@ public class ManagerMiddleware
 {
     private readonly RequestDelegate _next;
     private readonly ILogger<ManagerMiddleware>? _logger;
-    /*private readonly IConfiguration _configuration;
-    private readonly IManagerService _managerService;*/
     public ManagerMiddleware(RequestDelegate next, ILogger<ManagerMiddleware> logger)
     {
         _next = next;

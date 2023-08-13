@@ -1,0 +1,58 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+
+Inmueble <- Categoria
+Categoria - Productos
+Tienda -- Productos
+Tienda -- Inmueble
+Usuario -- Productos
+class Servicios{
+    -int id
+    -String Nombre
+    -String descripcion
+    -Decimal precio
+    -String Picture
+}
+class Categoria{
+    -int id
+    -String Nombre
+    -String descripcion
+}
+
+class Tienda{
+    -int id
+    -String Nombre
+    -String direccion
+    -String telefono
+    -String Picture
+}
+class Usuario{
+    -int id
+    -String nome
+    -String email
+    -String Apellido
+    -String telefono
+}
+class Inmueble{
+    -int id
+    -String Nombre
+    -String direccion
+    -Decimal precio
+    -String Picture
+}
+class Productos{
+    -int id
+    -String Nombre
+    -String descripcion
+    -Decimal precio
+    -String Picture
+}
+class Compras{
+    -int id
+    -int id_usuario
+    -int id_producto
+    -int cantidad
+    -Decimal precio
+    -Decimal total
+}
+@enduml

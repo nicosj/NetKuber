@@ -18,7 +18,7 @@ public class JwtGenerador : IJwtGenerador
         };
 
         //generar llave
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Mi palabra secreta"));
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Mi palabra secreta Maria Pia Nicolas Belen Pepito Hongito 19892014"));
 
         //firmar credenciales
         var credenciales = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);

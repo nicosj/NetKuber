@@ -10,7 +10,8 @@ public class UsuarioSesion : IUsuarioSesion
     }
     public string ObtenerUsuarioSesion()
     {
-     var userName=_httpContextAccessor.HttpContext.User?.Claims?.FirstOrDefault(x=>x.Type==ClaimTypes.NameIdentifier)?.Value;
-     return userName;
+     var userName=_httpContextAccessor.HttpContext!.User?.Claims?.FirstOrDefault(x=>x.Type==ClaimTypes.NameIdentifier)?.Value;
+     Console.WriteLine(userName+" <-asdasdas");
+     return userName!;
     }
 }
