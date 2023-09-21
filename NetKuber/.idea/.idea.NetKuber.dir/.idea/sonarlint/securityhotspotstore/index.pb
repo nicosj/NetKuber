@@ -22,8 +22,6 @@ E
 Token/JwtGenerador.cs,4\c\4cfc820c4546f3a35082c0ea25d919b0fdd57910
 Q
 !Middleware/MiddlewareException.cs,9\4\942318e69de088ebf0353a3cdbad2f9fa51fa4bd
-F
-Token/UsuarioSesion.cs,2\b\2bfc4624405a33331d0c93f5cfedac2e4c7d37c2
 O
 Middleware/ManagerMiddleware.cs,4\9\495ed045c7453ce56cf5e7cce5014dfe4adcac8a
 :
@@ -71,3 +69,11 @@ F
 Models/SubCategoria.cs,4\e\4e0cda8222abe300e788d71a3d66298918a590b3
 B
 Models/Inmueble.cs,7\e\7e4a72add91b91976d086110b5083f48750a44df
+A
+Models/Usuario.cs,e\7\e791d5ea64093bde78a3270eacbf66b21160a112
+D
+Data/LoadDatabase.cs,1\1\11b8777ceaf82fdf669af533f93de6594a54c1a2
+R
+"Data/Usuarios/UsuarioRepository.cs,e\8\e84baeea3e625c610f2d427bb75764e36a5fe75a
+F
+Token/UsuarioSesion.cs,2\b\2bfc4624405a33331d0c93f5cfedac2e4c7d37c2
